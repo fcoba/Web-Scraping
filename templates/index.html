@@ -15,7 +15,7 @@
 </head>
 
 <body style="font-family: 'Marvel', sans-serif;">
-  <div class="container" style="height:  1050px;overflow: hidden;">
+  <div class="container" style="height:  2200px;overflow: hidden;">
 
     <div class="jumbotron text-center mars_image">
       <h1 style="">Mission to Mars</h1>
@@ -58,6 +58,35 @@
         </p>
       </div>
       </div>
+    </div>
+    <div class="col-12 pad top bg-black m-2">
+        <div class="panel panel-default">
+            <div class="panel-body text-white">
+              <h2 class="pt-2 pb-2">Martian Hemispheres</h2>
+              <hr>
+              <div class="row" >
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <img class = "img img-responsive plots" src="{{mars.mars_hemispheres[0].img_url}}" style="width:100%" alt="">
+                    <span>{{mars.mars_hemispheres[0].title}}</span>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <img class = "img img-responsive plots" src="{{mars.mars_hemispheres[1].img_url}}" style="width:100%" alt="">
+                    <span>{{mars.mars_hemispheres[1].title}}</span>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <img class = "img img-responsive plots" src="{{mars.mars_hemispheres[2].img_url}}" style="width:100%" alt="">
+                    <span>{{mars.mars_hemispheres[2].title}}</span>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <img class = "img img-responsive plots" src="{{mars.mars_hemispheres[3].img_url}}" style="width:100%" alt="">
+                    <span>{{mars.mars_hemispheres[3].title}}</span>
+                  </div>
+              </div>
+                       
+            </div>
+          </div>
     </div>
     <div class="col-12" style="text-align: center; margin-top: 20px;">&copy; 2018 Filis Coba</div>
     <div id='stars'></div>
