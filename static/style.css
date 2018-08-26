@@ -37,3 +37,9 @@ table, td, th {
     border: 2px solid white;
     margin: 8px;
 }
+
+.jumbotron {
+    background: #000000 url("./Mars.jpg") no-repeat bottom left;
+    background-position: center;
+    overflow: auto;
+  }
