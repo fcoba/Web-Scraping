@@ -1,0 +1,39 @@
+body {
+    
+    font-size: 12px;
+    line-height: 100%;
+    color:white;
+    background:black;
+  }
+
+.button {
+    background-color:  #a1251b; 
+    color: black;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    color:  #a1251b;
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+
+}
+
+.weather-box {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+}
+
+table, td, th {
+    border: 2px solid white;
+    margin: 8px;
+}
