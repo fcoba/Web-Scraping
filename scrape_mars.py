@@ -15,15 +15,15 @@ def scrape():
     print("google chrome bin = %s"%chrome_exec_shim)
     print("chromedriver_path = %s"%chromedriver_path)
     if (chrome_exec_shim):
-        chrome_options = Options()
-        chrome_options.binary_location = chrome_exec_shim
-        chrome_options.add_argument('--headless')
-        chrome_options.add_argument('--disable-gpu')
-        chrome_options.add_argument('--no-sandbox')
-        driver = webdriver.Chrome(executable_path=chromedriver_path, chrome_options=chrome_options)
+        # chrome_options = Options()
+        # chrome_options.binary_location = chrome_exec_shim
+        # chrome_options.add_argument('--headless')
+        # chrome_options.add_argument('--no-sandbox')
+        # driver = webdriver.Chrome(executable_path=chromedriver_path, chrome_options=chrome_options)
         # self.selenium = webdriver.Chrome(executable_path=chrome_exec_shim)
+        exec_path = {'executable_path': chromedriver_path}
 
-    browser = Browser("chrome", driver, headless=False)
+    browser = Browser("chrome", headless=True, **exec_path)
 
     mars_facts_data = {}
 
