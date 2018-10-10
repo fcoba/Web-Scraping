@@ -42,24 +42,30 @@ def scrape():
     # JPL Mars Space Images - Featured Image
 
     # Visit the JPL site which includes the featured image and extract the html code.  
-    jpl_image_url = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
-    browser.visit(jpl_image_url)
+#     jpl_image_url = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
+#     browser.visit(jpl_image_url)
 
-    html = browser.html
-    soup = bs(html,"html.parser")
+#     html = browser.html
+#     soup = bs(html,"html.parser")
 
-    featured_image_url = soup.find('a', {'id': 'full_image', 'data-fancybox-href': True}).get('data-fancybox-href') 
+#     featured_image_url = soup.find('a', {'id': 'full_image', 'data-fancybox-href': True}).get('data-fancybox-href') 
 
-    split_url = featured_image_url.split('/')
+#     split_url = featured_image_url.split('/')
 
-    pia_url = split_url[-1]
+#     pia_url = split_url[-1]
 
-    base_image_url = "https://photojournal.jpl.nasa.gov/jpeg/"
+#     base_image_url = "https://photojournal.jpl.nasa.gov/jpeg/"
 
-    pia_final = pia_url.split('_')[0]+'.jpg'
+#     pia_final = pia_url.split('_')[0]+'.jpg'
 
-    full_image_url = base_image_url + pia_final
-    mars_facts_data["featured_image_url"] = full_image_url
+#     full_image_url = base_image_url + pia_final
+#     mars_facts_data["featured_image_url"] = full_image_url
+    browser.visit('https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars')
+    browser.find_by_id('full_image').click()
+    featured_image_url = browser.find_by_css('.fancybox-image').first['src']
+
+    mars_facts_data['featured_image_url'] = featured_image_url
+
 
     # Mars Weather
     mars_weather_twitter_url = "https://twitter.com/marswxreport?lang=en"
