@@ -4,7 +4,7 @@ import scrape_mars
 import os
 from flask_pymongo import PyMongo
 
-MONGO_URL = os.environ.get('MONGO_URL')
+MONGO_URL = os.environ.get('MONGODB_URI')
 if not MONGO_URL:
     MONGO_URL = "mongodb://localhost:27017/rest"
 
