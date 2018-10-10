@@ -12,12 +12,14 @@ def scrape():
     # Open a blank window of Google Chrome.
     chrome_exec_shim = os.environ.get("GOOGLE_CHROME_BIN", "chromedriver")
     chromedriver_path = os.environ.get("CHROMEDRIVER_PATH", "")
+    print("google chrome bin = %s"%chrome_exec_shim)
+    print("chromedriver_path = %s"chromedriver_path)
     if (chrome_exec_shim):
         chrome_options = Options()
-        chrome_options.binary_location = GOOGLE_CHROME_BIN
+        chrome_options.binary_location = chrome_exec_shim
         chrome_options.add_argument('--disable-gpu')
         chrome_options.add_argument('--no-sandbox')
-        driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
+        driver = webdriver.Chrome(executable_path=chromedriver_path, chrome_options=chrome_options)
         # self.selenium = webdriver.Chrome(executable_path=chrome_exec_shim)
 
     browser = Browser("chrome", driver, headless=False)
