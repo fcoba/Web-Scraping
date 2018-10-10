@@ -1,1 +1,1 @@
-gunicorn Web-Scraping.app:app
+web: gunicorn app:app
