@@ -24,7 +24,7 @@ def scrape():
     print(mars['featured_image_url'])
     # collection.insert_one(mars)
     mongo.db.mars_facts.insert(mars)
-    return redirect("http://localhost:5000/", code=302)
+    return redirect("/", code=302)
 
 @app.route("/")
 def home():
