@@ -13,7 +13,7 @@ def scrape():
     chrome_exec_shim = os.environ.get("GOOGLE_CHROME_BIN", "chromedriver")
     chromedriver_path = os.environ.get("CHROMEDRIVER_PATH", "")
     print("google chrome bin = %s"%chrome_exec_shim)
-    print("chromedriver_path = %s"chromedriver_path)
+    print("chromedriver_path = %s"%chromedriver_path)
     if (chrome_exec_shim):
         chrome_options = Options()
         chrome_options.binary_location = chrome_exec_shim
