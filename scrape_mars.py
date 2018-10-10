@@ -17,6 +17,7 @@ def scrape():
     if (chrome_exec_shim):
         chrome_options = Options()
         chrome_options.binary_location = chrome_exec_shim
+        chrome_options.add_argument('--headless')
         chrome_options.add_argument('--disable-gpu')
         chrome_options.add_argument('--no-sandbox')
         driver = webdriver.Chrome(executable_path=chromedriver_path, chrome_options=chrome_options)
