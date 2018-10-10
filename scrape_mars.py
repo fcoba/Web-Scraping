@@ -1,13 +1,20 @@
 import pandas as pd
+import os
 from bs4 import BeautifulSoup as bs
 import time 
 from splinter import Browser
 from flask import Flask, jsonify, request
+from selenium import webdriver
 
 # NASA Mars News
 def scrape():
     # Open a blank window of Google Chrome.
+    chrome_exec_shim = os.environ.get("GOOGLE_CHROME_BIN", "chromedriver")
+    if (chrome_exec_shim):
+        self.selenium = webdriver.Chrome(executable_path=chrome_exec_shim)
+
     browser = Browser("chrome", headless=False)
+
     mars_facts_data = {}
 
     # Visit the NASA newspage using the blank Chrome window. 
